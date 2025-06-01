@@ -98,3 +98,38 @@ const squareArray2 = numbers1.map((element, index) => {
 //ekane map() method e multiple parameter dewa jay. ekane index dewa te index value return korche
 
 
+
+// ------------------------------foreach, filter, find, and differences between them----------------------------------------------
+
+
+const products = [
+    { id:1, name:'iphone', color:'black',price:1200, brand:'iphone'},
+    { id:2, name:'xaiomi', color:'gold',price:100, brand:'xaiomi'},
+    { id:3, name:'samsung', color:'gold',price:1500, brand:'sam'},
+    { id:4, name:'iphone', color:'gold',price:1000, brand:'iphone'},
+    { id:4, name:'xaiomi', color:'black',price:1100, brand:'xiaomi'}
+];
+
+// forEach loop  kuno object er upor loop through kore but kuno value RETURN KORE NA tai sob output console kore nite hoy 
+products.forEach(product =>{
+    if(product.color === 'gold'){
+        console.log(product)
+    }
+})
+
+// filter() method kuno ekti object er upor condition onujayii loop chaliye element khuje niye array[] er vitor value return kore. FILTERING KORE 
+// condition na mille empty array[] return korbe
+const newProducts= products.filter(product => product.price > 1000);
+console.log(newProducts)
+
+
+// find: eti kuno object theke condition onujayii loop chaliye element khuje only 1st element ke object{} e return kore
+// condition na mille undefined return korbe
+const product1= products.find(ponno => ponno.id === 4);
+console.log(product1);
+
+
+// kuno ekti element(s) BAAD diye ekti notun array[] pete holew filter() use kora jay
+const newProducts1=products.filter(p => p.id !== 3);
+console.log(newProducts1)
+
